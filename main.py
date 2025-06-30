@@ -1,13 +1,14 @@
-import streamlit as st
-from model.launch_predictor import predict_success
+from model.launch_predictor import load_model_and_vectorizer, predict
 from utils.preprocess import preprocess_text
+import json
 
-st.title("🚀 Project Launch Success Predictor")
+if __name__ == "__main__":
+    model, vectorizer = load_model_and_vectorizer()
+    
+    with open("data/test_inputs.json", "r") as f:
+        ideas = json.load(f)
 
-title = st.text_input("Project Title")
-description = st.text_area("Project Description")
-tags = st.text_input("Tags (comma-separated)")
-
-if st.button("Predict"):
-    score = predict_success(title, description, tags)
-    st.success(f"Predicted Success: {round(score * 100, 2)}%")
+    for idea in ideas:
+        clean_text = preprocess_text(idea["description"])
+        result = predict(model, vectorizer, clean_text)
+        print(f"'{idea['title']}' prediction: {result}")
