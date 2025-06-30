@@ -1,1 +1,22 @@
-
+[
+    {
+        "title": "AI-Powered Resume Optimizer",
+        "description": "A web app that analyzes and optimizes resumes using GPT-based suggestions to improve job matching."
+    },
+    {
+        "title": "Smart Bicycle Lock",
+        "description": "A Bluetooth-enabled bike lock that can be controlled via smartphone and includes theft detection alerts."
+    },
+    {
+        "title": "Artisan Coffee Subscription Box",
+        "description": "A subscription service delivering hand-picked, small-batch coffee blends to your door every month."
+    },
+    {
+        "title": "Recycled Plastic Fashion",
+        "description": "A sustainable clothing line made entirely from ocean-recycled plastics and eco-friendly materials."
+    },
+    {
+        "title": "Digital Mindfulness Coach",
+        "description": "An AI chatbot that guides users through personalized mindfulness and meditation exercises daily."
+    }
+]
